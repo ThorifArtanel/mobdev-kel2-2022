@@ -36,7 +36,7 @@ public class FragmentProfile extends Fragment {
 
     // This event is triggered soon after onCreateView().
     // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
-    @Override
+    @Override/
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
@@ -47,6 +47,17 @@ public class FragmentProfile extends Fragment {
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction()
                         .replace(R.id.fragmentContainerView, FragmentChangePass.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        Button btnEditProfile = (Button) getActivity().findViewById(R.id.btnEditProfile);
+        btnEditProfile.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentEdit.class, null)
                         .setReorderingAllowed(true)
                         .addToBackStack(null)
                         .commit();

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentHelp"
+    android:padding="16dp">
+    <View
+        android:id="@+id/anchorHelp"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/ivHelp1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_warning"
+        android:layout_above="@id/anchorHelp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/anchorHelp"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/btnHelper1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="HELP"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:backgroundTint="@color/redTheme"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

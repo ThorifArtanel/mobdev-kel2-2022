@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentFallen">
+
+    <TextView
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:text="Apakah anda terjatuh?"
+        android:layout_above="@id/btnFallen"
+        />
+
+    <Button
+        android:id="@+id/btnFallen"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_margin="8dp"
+        android:textSize="30sp"
+        android:backgroundTint="@color/redTheme"
+        android:text="Terjatuh"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/btnNotFallen"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_margin="8dp"
+        android:textSize="30sp"
+        android:backgroundTint="@color/blueTheme"
+        android:text="Tidak Terjatuh"
+        android:layout_below="@id/btnFallen"/>
+
+</RelativeLayout>

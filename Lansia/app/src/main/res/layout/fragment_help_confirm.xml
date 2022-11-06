@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentHelpConfirm"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivHelpConfirm1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:minHeight="150dp"
+        android:src="@drawable/ic_warning"
+        android:layout_above="@id/tvHelpConfirm1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvHelpConfirm1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOS"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_above="@id/anchorHelpConfirm"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/anchorHelpConfirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tvHelpConfirm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mengirim SOS dalam X Detik"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/anchorHelpConfirm"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvHelpConfirm2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnHelpConfirm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:minHeight="80dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_warning"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:backgroundTint="@color/black" />
+
+        <Button
+            android:id="@+id/btnHelpConfirm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:minHeight="80dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_baseline_cancel_24"
+            android:drawableTint="@color/black"
+            android:textSize="40sp"
+            android:backgroundTint="@color/black" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentHelpConfirmed"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivHelpConfirmed1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_warning"
+        android:layout_above="@id/tvHelpConfirmed1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvHelpConfirmed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOS"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/btnHelpConfirmed1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Selesai"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:backgroundTint="@color/blueTheme"
+        android:layout_below="@id/tvHelpConfirmed1"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

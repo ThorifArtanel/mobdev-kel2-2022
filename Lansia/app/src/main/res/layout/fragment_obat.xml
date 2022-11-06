@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentObat"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivObat1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_pill"
+        android:layout_above="@id/tvObat1"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvObat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waktu Minum Obat"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_above="@id/anchorObat"
+        android:layout_centerHorizontal="true" />
+
+    <View
+        android:id="@+id/anchorObat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/tvObat2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vitamin B @1 Tablet"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/anchorObat"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnObat1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Obat Sudah Diminum"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:backgroundTint="@color/blueTheme"
+        android:layout_below="@id/tvObat2"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -31,7 +32,7 @@ public class FragmentGuide extends Fragment {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
 
-        TextView btnSelengkapnya1 = (TextView) getActivity().findViewById(R.id.selengkapnyaGuide01);
+        Button btnSelengkapnya1 = (Button) getActivity().findViewById(R.id.selengkapnyaGuide01);
         btnSelengkapnya1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -43,7 +44,7 @@ public class FragmentGuide extends Fragment {
             }
         });
 
-        TextView btnSelengkapnya2 = (TextView) getActivity().findViewById(R.id.selengkapnyaGuide02);
+        Button btnSelengkapnya2 = (Button) getActivity().findViewById(R.id.selengkapnyaGuide02);
         btnSelengkapnya2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -55,7 +56,7 @@ public class FragmentGuide extends Fragment {
             }
         });
 
-        TextView btnSelengkapnya3 = (TextView) getActivity().findViewById(R.id.selengkapnyaGuide03);
+        Button btnSelengkapnya3 = (Button) getActivity().findViewById(R.id.selengkapnyaGuide03);
         btnSelengkapnya3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

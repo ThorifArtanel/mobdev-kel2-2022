@@ -75,13 +75,14 @@
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/selengkapnyaGuide01"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Lihat Selengkapnya"
-                            android:textColor="@color/blue_link"
-                            android:textSize="12sp" />
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/main_theme"
+                            android:text="Selengkapnya" />
 
                         <TextView
                             android:id="@+id/textView4"
@@ -163,13 +164,14 @@
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/selengkapnyaGuide02"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Lihat Selengkapnya"
-                            android:textColor="@color/blue_link"
-                            android:textSize="12sp" />
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/main_theme"
+                            android:text="Selengkapnya" />
 
                         <TextView
                             android:id="@+id/textView8"
@@ -243,20 +245,21 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/selengkapnyaGuide03"
+                            android:id="@+id/selengkapnya"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula nunc eu sapien tempor, id dapibus lectus euismod. Suspendisse vitae ex sapien. Interdum et."
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
-                        <TextView
-                            android:id="@+id/textView11"
+                        <Button
+                            android:id="@+id/selengkapnyaGuide03"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Lihat Selengkapnya"
-                            android:textColor="@color/blue_link"
-                            android:textSize="12sp" />
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/main_theme"
+                            android:text="Selengkapnya" />
 
                         <TextView
                             android:id="@+id/textView12"

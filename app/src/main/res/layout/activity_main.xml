@@ -19,7 +19,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="cs.upi.edu.mobdevkel2.FragmentHome"
+        android:name="cs.upi.edu.mobdevkel2.FragmentWelcome"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="60dp"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_lansia" />
+        tools:layout="@layout/fragment_welcome" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/botNav"

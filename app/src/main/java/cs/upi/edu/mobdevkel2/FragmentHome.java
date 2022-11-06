@@ -1,9 +1,11 @@
 package cs.upi.edu.mobdevkel2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -115,7 +117,7 @@ public class FragmentHome extends Fragment{
             }
         });
 
-        TextView btnSelengkapnya = (TextView) getActivity().findViewById(R.id.selengkapnya01);
+        Button btnSelengkapnya = (Button) getActivity().findViewById(R.id.selengkapnya01);
         btnSelengkapnya.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

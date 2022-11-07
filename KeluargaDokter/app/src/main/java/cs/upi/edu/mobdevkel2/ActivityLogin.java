@@ -24,7 +24,7 @@ public class ActivityLogin extends AppCompatActivity {
         });
     }
     public void openHomeFamily(){
-        Intent intent = new Intent(this, FragmentHome.class);
+        Intent intent = new Intent(this, ActivityKeluarga.class);
         startActivity(intent);
     }
 }

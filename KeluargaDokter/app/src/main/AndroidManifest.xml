@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobdevkel2">
         <activity
-            android:name=".ActivityWelcome"
+            android:name=".ActivityKeluarga"
             android:exported="false" />
         <activity
             android:name=".ActivityRegister"

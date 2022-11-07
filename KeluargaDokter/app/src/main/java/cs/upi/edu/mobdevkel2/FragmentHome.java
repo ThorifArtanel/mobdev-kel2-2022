@@ -1,19 +1,31 @@
 package cs.upi.edu.mobdevkel2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.loopj.android.http.*;
+
+import org.json.*;
+
+import java.util.ArrayList;
+
+import cz.msebera.android.httpclient.entity.mime.Header;
 
 public class FragmentHome extends Fragment{
+    ArrayList<DataGuide> dataGuide = new ArrayList<>();
+    AdapterDataGuide adapter;
+    RecyclerView rvDataGuide;
+    RecyclerView.LayoutManager lm;
+
     public FragmentHome(){
         // require a empty public constructor
     }
@@ -44,6 +56,21 @@ public class FragmentHome extends Fragment{
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
+        dataGuide.add(new DataGuide(R.drawable.ic_add_plus, "Title","Lorem Ipsum Dolor Sit Amet",""));
+        dataGuide.add(new DataGuide(R.drawable.ic_add_plus, "Title","Lorem Ipsum Dolor Sit Amet",""));
+
+        rvDataGuide =  (RecyclerView) getActivity().findViewById(R.id.rvGuide);
+
+        //supaya cepat karena ukuran baris tdk berubah.
+        rvDataGuide .setHasFixedSize(true);
+
+        //adapter
+        adapter = new AdapterDataGuide(dataGuide);
+        rvDataGuide.setAdapter(adapter);
+
+        //layout manager
+        lm = new LinearLayoutManager(getActivity().getBaseContext());
+        rvDataGuide.setLayoutManager(lm);
 
         ImageView btnPindai = (ImageView) getActivity().findViewById(R.id.pindai);
         btnPindai.setOnClickListener(new View.OnClickListener(){
@@ -117,21 +144,21 @@ public class FragmentHome extends Fragment{
             }
         });
 
-        Button btnSelengkapnya = (Button) getActivity().findViewById(R.id.selengkapnya01);
-        btnSelengkapnya.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentDetailGuide.class, null)
-                        .setReorderingAllowed(true)
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-
         Toolbar tb = (Toolbar)   getActivity().findViewById(R.id.toolbar);
         tb.setNavigationIcon(null);
         tb.setTitle("Beranda");
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

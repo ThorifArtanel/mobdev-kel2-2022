@@ -10,17 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentPindai#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class FragmentPindai extends Fragment {
     public FragmentPindai() {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
     public static FragmentPindai newInstance() {
         FragmentPindai fragment = new FragmentPindai();
         Bundle args = new Bundle();
@@ -40,12 +34,8 @@ public class FragmentPindai extends Fragment {
         return inflater.inflate(R.layout.fragment_pindai, container, false);
     }
 
-    // This event is triggered soon after onCreateView().
-    // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        // Setup any handles to view objects here
-        // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
         Toolbar tb = (Toolbar)   getActivity().findViewById(R.id.toolbar);
         tb.setNavigationIcon(R.drawable.ic_baseline_arrow_back_24);
         tb.setTitle("Pindai");

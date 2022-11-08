@@ -27,7 +27,7 @@ public class ActivityKeluarga extends AppCompatActivity {
         if (savedInstanceState == null) {
             myToolbar.setTitle("Beranda");
             fragmentManager.beginTransaction()
-                    .add(R.id.fragmentContainerView, FragmentHome.class, null)
+                    .add(R.id.fragmentContainerView, Test.class, null)
                     .setReorderingAllowed(true)
                     .addToBackStack(null)
                     .commit();

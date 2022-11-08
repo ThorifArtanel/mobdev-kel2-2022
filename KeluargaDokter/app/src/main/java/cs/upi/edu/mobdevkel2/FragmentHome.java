@@ -12,13 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.loopj.android.http.*;
-
-import org.json.*;
-
 import java.util.ArrayList;
-
-import cz.msebera.android.httpclient.entity.mime.Header;
 
 public class FragmentHome extends Fragment{
     ArrayList<DataGuide> dataGuide = new ArrayList<>();

@@ -1,38 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentHelpConfirmed"
-    android:padding="16dp">
+    tools:context=".FragmentHelp">
 
-    <ImageView
-        android:id="@+id/ivHelpConfirmed1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_warning"
-        android:layout_above="@id/tvHelpConfirmed1"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
-        android:id="@+id/tvHelpConfirmed1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SOS"
-        android:textStyle="bold"
-        android:textSize="40sp"
-        android:textColor="@color/black"
-        android:layout_centerInParent="true" />
-
-    <Button
-        android:id="@+id/btnHelpConfirmed1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="Selesai"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        android:backgroundTint="@color/blueTheme"
-        android:layout_below="@id/tvHelpConfirmed1"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:id="@+id/layout_help">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="40dp">
+
+            <ImageView
+                android:id="@+id/home_pindai"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="end"
+                android:layout_marginBottom="70dp"
+                android:src="@drawable/rick_qr" />
+
+            <ImageView
+                android:id="@+id/btnHelper1"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/ic_help"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSOS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="Emergency SOS"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="Anda dalam kondisi darurat. Bantuan akan segera datang"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnChangePass"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:backgroundTint="@color/blueTheme"
+                android:text="Batal" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class FragmentHelp extends Fragment {
     public FragmentHelp() {
@@ -36,8 +37,20 @@ public class FragmentHelp extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
-        Button btn1 = (Button) getActivity().findViewById(R.id.btnHelper1);
-        btn1.setOnClickListener(new View.OnClickListener(){
+        ImageView qrCode = (ImageView) getActivity().findViewById(R.id.home_pindai1);
+        qrCode.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentQr.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        Button sos = (Button) getActivity().findViewById(R.id.sos);
+        sos.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction()
@@ -45,6 +58,24 @@ public class FragmentHelp extends Fragment {
                         .setReorderingAllowed(true)
                         .addToBackStack(null)
                         .commit();
+//                countDownTimer.start();
+//                timerHasStarted = true;
+
+            }
+        });
+
+        Button detailObat = (Button) getActivity().findViewById(R.id.btnDetailObat);
+        detailObat.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentDetailObat.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+//                countDownTimer.start();
+//                timerHasStarted = true;
+
             }
         });
     }

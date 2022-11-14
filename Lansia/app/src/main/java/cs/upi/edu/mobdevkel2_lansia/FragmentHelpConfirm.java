@@ -9,8 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.os.CountDownTimer;
 
 public class FragmentHelpConfirm extends Fragment {
+
+    private CountDownTimer countDownTimer;
+    private final long startTime = 30 * 1000;
+    private final long interval = 1 * 1000;
+
+
     public FragmentHelpConfirm() {
         // Required empty public constructor
     }
@@ -38,27 +46,48 @@ public class FragmentHelpConfirm extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
-        Button btnConfirm = (Button) getActivity().findViewById(R.id.btnHelpConfirm1);
-        btnConfirm.setOnClickListener(new View.OnClickListener(){
+        ImageView pindai = (ImageView) getActivity().findViewById(R.id.home_pindai);
+        pindai.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentHelpConfirmed.class, null)
+                        .replace(R.id.fragmentContainerView, FragmentQr.class, null)
                         .setReorderingAllowed(true)
                         .addToBackStack(null)
                         .commit();
             }
         });
 
-        Button btnCancel = (Button) getActivity().findViewById(R.id.btnHelpConfirm2);
-        btnCancel.setOnClickListener(new View.OnClickListener(){
+        Button batalSOS = (Button) getActivity().findViewById(R.id.batal_sos);
+        batalSOS.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction()
                         .replace(R.id.fragmentContainerView, FragmentHelp.class, null)
                         .setReorderingAllowed(true)
+                        .addToBackStack(null)
                         .commit();
             }
         });
     }
+    class MyCountDownTimer extends CountDownTimer {
+        public MyCountDownTimer(long startTime, long interval) {
+            super(startTime, interval);
+        }
+        public void onFinish() {
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.fragmentContainerView, FragmentHelpConfirmed.class, null)
+                    .setReorderingAllowed(true)
+                    .addToBackStack(null)
+                    .commit();
+        }
+        public void onTick(long millisUntilFinished) {
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.fragmentContainerView, FragmentHelpConfirmed.class, null)
+                    .setReorderingAllowed(true)
+                    .addToBackStack(null)
+                    .commit();
+        }
+    }
+
 }

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class FragmentHelpConfirmed extends Fragment {
     public FragmentHelpConfirmed() {
@@ -38,13 +39,14 @@ public class FragmentHelpConfirmed extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
-        Button btnCancel = (Button) getActivity().findViewById(R.id.btnHelpConfirmed1);
-        btnCancel.setOnClickListener(new View.OnClickListener(){
+        ImageView pindai = (ImageView) getActivity().findViewById(R.id.home_pindai);
+        pindai.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentHelp.class, null)
+                        .replace(R.id.fragmentContainerView, FragmentQr.class, null)
                         .setReorderingAllowed(true)
+                        .addToBackStack(null)
                         .commit();
             }
         });

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,12 +44,12 @@ public class FragmentObat extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
-        Button btnDone = (Button) getActivity().findViewById(R.id.btnObat1);
-        btnDone.setOnClickListener(new View.OnClickListener(){
+        ImageView pindai = (ImageView) getActivity().findViewById(R.id.home_pindai);
+        pindai.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentHelp.class, null)
+                        .replace(R.id.fragmentContainerView, FragmentQr.class, null)
                         .setReorderingAllowed(true)
                         .addToBackStack(null)
                         .commit();

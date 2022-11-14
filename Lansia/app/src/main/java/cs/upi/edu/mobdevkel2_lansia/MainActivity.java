@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         if (savedInstanceState == null) {
             fragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainerView, FragmentHelpConfirm.class, null)
+                    .replace(R.id.fragmentContainerView, FragmentHelp.class, null)
                     .setReorderingAllowed(true)
                     .addToBackStack(null)
                     .commit();

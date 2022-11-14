@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/fragmentHome"
-        android:name="cs.upi.edu.mobdevkel2.FragmentHome"
+        android:name="cs.upi.edu.mobdevkel2.keluarga.FragmentHome"
         android:label="FragmentHome" />
 </navigation>

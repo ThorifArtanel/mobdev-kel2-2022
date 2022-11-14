@@ -5,29 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
-import cs.upi.edu.mobdevkel2.dokter.ActivityDokter;
-import cs.upi.edu.mobdevkel2.keluarga.ActivityKeluarga;
-
-public class ActivityLogin extends AppCompatActivity {
+public class ActivityRegisterDokter extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register_dokter);
 
-        Button login = (Button) findViewById(R.id.btnLogin);
+        TextView login = (TextView) findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomeFamily();
+                openLogin();
             }
         });
     }
-
-    public void openHomeFamily(){
-        Intent intent = new Intent(this, ActivityKeluarga.class);
+    public void openLogin(){
+        Intent intent = new Intent(this, ActivityLoginDokter.class);
         startActivity(intent);
     }
 }

@@ -1,4 +1,4 @@
-package cs.upi.edu.mobdevkel2;
+package cs.upi.edu.mobdevkel2.dokter;
 
 import android.os.Bundle;
 
@@ -9,14 +9,19 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 
-public class FragmentWelcome extends Fragment {
-    public FragmentWelcome() {
+import cs.upi.edu.mobdevkel2.R;
+
+public class FragmentDktProfile extends Fragment {
+    public FragmentDktProfile() {
         // Required empty public constructor
     }
-    public static FragmentWelcome newInstance() {
-        FragmentWelcome fragment = new FragmentWelcome();
+
+    public static FragmentDktProfile newInstance() {
+        FragmentDktProfile fragment = new FragmentDktProfile();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
         return fragment;
     }
 
@@ -29,39 +34,39 @@ public class FragmentWelcome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_welcome, container, false);
+        return inflater.inflate(R.layout.fragment_dkt_profile, container, false);
     }
 
+    @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
-
-        ImageView family = (ImageView) getActivity().findViewById(R.id.welcomeFamily);
-        family.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentRegister.class, null)
-                        .setReorderingAllowed(true)
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-
-        ImageView doctor = (ImageView) getActivity().findViewById(R.id.welcomeDokter);
-        doctor.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentRegisterDokter.class, null)
-                        .setReorderingAllowed(true)
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-
         Toolbar tb = (Toolbar)   getActivity().findViewById(R.id.toolbar);
         tb.setNavigationIcon(null);
-        tb.setTitle("Welcome");
+        tb.setTitle("Profil");
+
+        Button btnProfilePass = (Button) getActivity().findViewById(R.id.btnChangePass);
+        btnProfilePass.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentDktProfilePass.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        Button btnProfileEdit = (Button) getActivity().findViewById(R.id.btnEditProfile);
+        btnProfileEdit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView, FragmentDktProfileEdit.class, null)
+                        .setReorderingAllowed(true)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
     }
 }

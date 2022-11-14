@@ -1,4 +1,4 @@
-package cs.upi.edu.mobdevkel2;
+package cs.upi.edu.mobdevkel2.keluarga;
 
 import android.os.Bundle;
 
@@ -9,14 +9,24 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 
-public class FragmentWelcome extends Fragment {
-    public FragmentWelcome() {
+import cs.upi.edu.mobdevkel2.R;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link FragmentObat#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class FragmentObat extends Fragment {
+    public FragmentObat() {
         // Required empty public constructor
     }
-    public static FragmentWelcome newInstance() {
-        FragmentWelcome fragment = new FragmentWelcome();
+
+    public static FragmentObat newInstance() {
+        FragmentObat fragment = new FragmentObat();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
         return fragment;
     }
 
@@ -29,39 +39,28 @@ public class FragmentWelcome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_welcome, container, false);
+        return inflater.inflate(R.layout.fragment_obat, container, false);
     }
 
+    // This event is triggered soon after onCreateView().
+    // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
+    @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
-
-        ImageView family = (ImageView) getActivity().findViewById(R.id.welcomeFamily);
-        family.setOnClickListener(new View.OnClickListener(){
+        Button btnAddObat = (Button) getActivity().findViewById(R.id.btnAddObat);
+        btnAddObat.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentRegister.class, null)
+                        .replace(R.id.fragmentContainerView, FragmentAddObat.class, null)
                         .setReorderingAllowed(true)
                         .addToBackStack(null)
                         .commit();
             }
         });
-
-        ImageView doctor = (ImageView) getActivity().findViewById(R.id.welcomeDokter);
-        doctor.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                getParentFragmentManager().beginTransaction()
-                        .replace(R.id.fragmentContainerView, FragmentRegisterDokter.class, null)
-                        .setReorderingAllowed(true)
-                        .addToBackStack(null)
-                        .commit();
-            }
-        });
-
         Toolbar tb = (Toolbar)   getActivity().findViewById(R.id.toolbar);
         tb.setNavigationIcon(null);
-        tb.setTitle("Welcome");
+        tb.setTitle("Obat");
     }
 }

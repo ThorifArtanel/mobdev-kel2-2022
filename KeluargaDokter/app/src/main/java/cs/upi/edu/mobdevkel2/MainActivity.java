@@ -20,9 +20,22 @@ public class MainActivity extends AppCompatActivity {
                 openHomeFamily();
             }
         });
+
+        ImageView doctor = (ImageView) findViewById(R.id.welcomeDokter);
+        doctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomeDokter();
+            }
+        });
     }
     public void openHomeFamily(){
         Intent intent = new Intent(this, ActivityLogin.class);
+        startActivity(intent);
+    }
+
+    public void openHomeDokter(){
+        Intent intent = new Intent(this, ActivityLoginDokter.class);
         startActivity(intent);
     }
 }

@@ -9,7 +9,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobdevkel2">
         <activity
-            android:name=".ActivityKeluarga"
+            android:name=".ActivityRegisterDokter"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLoginDokter"
+            android:exported="false" />
+        <activity
+            android:name=".dokter.ActivityDokter"
+            android:exported="false" />
+        <activity
+            android:name=".keluarga.ActivityKeluarga"
             android:exported="false" />
         <activity
             android:name=".ActivityRegister"

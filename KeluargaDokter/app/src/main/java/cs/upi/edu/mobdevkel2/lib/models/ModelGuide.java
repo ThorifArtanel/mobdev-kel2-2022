@@ -1,5 +1,6 @@
 package cs.upi.edu.mobdevkel2.lib.models;
 
+import java.util.List;
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,60 +8,38 @@ import com.google.gson.annotations.SerializedName;
 @Generated("jsonschema2pojo")
 public class ModelGuide {
 
-    @SerializedName("content")
+    @SerializedName("guide")
     @Expose
-    private String content;
-    @SerializedName("desc")
+    private List<Guide> guide = null;
+    @SerializedName("msg")
     @Expose
-    private String desc;
-    @SerializedName("iconUrl")
+    private String msg;
+    @SerializedName("status")
     @Expose
-    private String iconUrl;
-    @SerializedName("id")
-    @Expose
-    private Integer id;
-    @SerializedName("title")
-    @Expose
-    private String title;
+    private Integer status;
 
-    public String getContent() {
-        return content;
+    public List<Guide> getGuide() {
+        return guide;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setGuide(List<Guide> guide) {
+        this.guide = guide;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getMsg() {
+        return msg;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 
-    public String getIconUrl() {
-        return iconUrl;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setIconUrl(String iconUrl) {
-        this.iconUrl = iconUrl;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
 }

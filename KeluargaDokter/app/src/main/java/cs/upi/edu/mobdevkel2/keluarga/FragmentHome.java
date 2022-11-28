@@ -12,15 +12,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-
-import cs.upi.edu.mobdevkel2.lib.models.AdapterDataGuide;
-import cs.upi.edu.mobdevkel2.lib.models.DataGuide;
 import cs.upi.edu.mobdevkel2.R;
 
 public class FragmentHome extends Fragment{
-    ArrayList<DataGuide> dataGuide = new ArrayList<>();
-    AdapterDataGuide adapter;
+    // Adapter Get
     RecyclerView rvDataGuide;
     RecyclerView.LayoutManager lm;
 
@@ -54,17 +49,13 @@ public class FragmentHome extends Fragment{
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         // Setup any handles to view objects here
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
-        dataGuide.add(new DataGuide(R.drawable.ic_add_plus, "Title","Lorem Ipsum Dolor Sit Amet",""));
-        dataGuide.add(new DataGuide(R.drawable.ic_add_plus, "Title","Lorem Ipsum Dolor Sit Amet",""));
 
         rvDataGuide =  (RecyclerView) getActivity().findViewById(R.id.rvGuide);
 
         //supaya cepat karena ukuran baris tdk berubah.
         rvDataGuide .setHasFixedSize(true);
 
-        //adapter
-        adapter = new AdapterDataGuide(dataGuide);
-        rvDataGuide.setAdapter(adapter);
+        //Adapter HERE
 
         //layout manager
         lm = new LinearLayoutManager(getActivity().getBaseContext());

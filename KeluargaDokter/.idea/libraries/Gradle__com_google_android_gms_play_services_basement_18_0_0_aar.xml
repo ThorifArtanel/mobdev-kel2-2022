@@ -4,6 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/99547991b050df2d3c976d84d02b6455/transformed/play-services-basement-18.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/99547991b050df2d3c976d84d02b6455/transformed/play-services-basement-18.0.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/99547991b050df2d3c976d84d02b6455/transformed/play-services-basement-18.0.0/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/ed085419e66d0be5c0cd9f6425c56121/transformed/play-services-basement-18.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ed085419e66d0be5c0cd9f6425c56121/transformed/play-services-basement-18.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ed085419e66d0be5c0cd9f6425c56121/transformed/play-services-basement-18.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-basement/18.0.0/36bdff1deaba5efcc76d7e68ea06b3c50af7bc0/play-services-basement-18.0.0-javadoc.jar!/" />

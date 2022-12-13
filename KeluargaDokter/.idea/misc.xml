@@ -68,6 +68,19 @@
         <entry key="..\:/AndroidStudioProjects/mobdev-kel2-family/app/src/main/res/layout/fragment_welcome.xml" value="0.225" />
         <entry key="..\:/AndroidStudioProjects/mobdev-kel2-family/app/src/main/res/menu/menu_bottom_nav.xml" value="0.225" />
         <entry key="..\:/AndroidStudioProjects/mobdev-kel2-family/app/src/main/res/menu/menu_top_bar.xml" value="0.225" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/activity_dokter.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/activity_login_dokter.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/activity_register_dokter.xml" value="0.10461956521739131" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/activity_welcome.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/fragment_dkt_profile_pass.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/fragment_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/fragment_login_dokter.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/fragment_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/fragment_register_dokter.xml" value="0.20416666666666666" />
+        <entry key="..\:/mobdev_baruu/KeluargaDokter/app/src/main/res/layout/fragment_welcome.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/drawable-anydpi/ic_action_name.xml" value="0.2185" />
         <entry key="app/src/main/res/drawable/ic_add.xml" value="0.2185" />
         <entry key="app/src/main/res/drawable/ic_guide.xml" value="0.2185" />

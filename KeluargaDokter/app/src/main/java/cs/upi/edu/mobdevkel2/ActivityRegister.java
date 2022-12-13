@@ -1,6 +1,7 @@
 package cs.upi.edu.mobdevkel2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,9 +23,14 @@ public class ActivityRegister extends AppCompatActivity {
                 openLogin();
             }
         });
+
+        Toolbar tb = (Toolbar) findViewById(R.id.toolbar);
+        tb.setNavigationIcon(null);
+        tb.setTitle("Register");
     }
-    public void openLogin(){
+    public void openLogin() {
         Intent intent = new Intent(this, ActivityLogin.class);
         startActivity(intent);
     }
+
 }

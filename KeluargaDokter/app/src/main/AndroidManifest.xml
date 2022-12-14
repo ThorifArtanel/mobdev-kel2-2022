@@ -12,9 +12,6 @@
         android:theme="@style/Theme.Mobdevkel2"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ActivityWelcome"
-            android:exported="false" />
-        <activity
             android:name=".ActivityRegisterDokter"
             android:exported="false" />
         <activity

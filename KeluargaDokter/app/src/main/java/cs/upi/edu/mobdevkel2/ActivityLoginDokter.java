@@ -34,10 +34,6 @@ public class ActivityLoginDokter extends AppCompatActivity {
                 openRegister();
             }
         });
-
-        Toolbar tb = (Toolbar) findViewById(R.id.toolbar);
-        tb.setNavigationIcon(null);
-        tb.setTitle("Login");
     }
 
     public void openHomeDoctor(){
